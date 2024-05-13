@@ -1,5 +1,5 @@
 <?php
-    // Include the controller responsible for handling profile edits
+
     require_once '../controllers/editProfileController.php'; 
 ?>
 
@@ -12,12 +12,11 @@
 </head>
 <body class="dashboard-page">
     <?php 
-    // Include the site's navigation header
     include_once 'header.php';
     ?>
 
     <section>
-      <!-- Centralizing the profile editing form using a table layout -->
+     
       <table width="100%" style="margin-top: 20px;">
         <tr>
           <td width="10%"></td> <!-- Left spacer column -->

@@ -1,5 +1,5 @@
 <?php
-    // Include the controller for finding customers
+
     include_once '../controllers/findCustomerController.php';
 ?>
 

@@ -1,6 +1,5 @@
 <?php
-    // Include the password change logic controller
-    require_once '../controllers/changePasswordController.php'; // Adjust the path as necessary
+    require_once '../controllers/changePasswordController.php'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,12 +7,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Change Password</title>
-    <link rel="stylesheet" href="path/to/your/styles.css"> <!-- Ensure the CSS path is correct -->
+    <link rel="stylesheet" href="path/to/your/styles.css"> 
 </head>
 <body class="dashboard-page">
-    <?php include 'header.php'; ?> <!-- Include the header navigation -->
+    <?php include 'header.php'; ?> 
     <section>
-        <div style="width: 50%; margin: 0 auto;"> <!-- Centering the form on the page -->
+        <div style="width: 50%; margin: 0 auto;"> 
             <h2>Change Password</h2>
             <p style="color: red"><?php echo $errMsg; ?></p>
             <form method="post" action="changePassword.php">

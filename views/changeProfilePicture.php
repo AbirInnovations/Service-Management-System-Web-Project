@@ -1,5 +1,4 @@
 <?php
-// Include the controller that handles the logic
 include_once '../controllers/changeProfilePictureController.php';
 ?>
 

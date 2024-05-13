@@ -1,5 +1,5 @@
 <?php
-// Include the Request Service controller for processing
+
 include_once '../controllers/requestServiceController.php';
 ?>
 
@@ -7,13 +7,13 @@ include_once '../controllers/requestServiceController.php';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Ensure proper rendering and touch zooming on mobile devices -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request Service</title>
 </head>
 <body class="dashboard-page">
     <?php 
-    // Include the header file for consistent site navigation
+ 
     include_once 'header.php';
     ?>
 
@@ -22,14 +22,14 @@ include_once '../controllers/requestServiceController.php';
         <tr>
           <td width="25%"></td>
           <td>
-            <!-- Display error message if any -->
+      
             <p style="color: red"><?php echo $errMsg;?></p>
             <br />
             <form method="post" action="" enctype="">
               <fieldset>
                 <legend>Request Service</legend>
                 <br />
-                <!-- Dropdown for selecting service type with dynamic selection handling -->
+          
                 Service Type: <select name="serviceType" id="serviceType" value="<?php echo $serviceType;?>" required>
                     <option value="" <?php if (isset($serviceType) && $serviceType=="") echo "selected";?>>-</option>
                     <option value="service 1" <?php if (isset($serviceType) && $serviceType=="Service 1") echo "selected";?>>Service 1</option>

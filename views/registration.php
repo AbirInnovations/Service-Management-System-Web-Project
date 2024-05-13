@@ -1,11 +1,11 @@
 <?php 
-// Initialize the error message variable to store any error messages
+
 $errMsg = '';
 
-// Include the registration controller script for handling the registration logic
+
 include_once '../controllers/registrationController.php';
 
-// Include the header file which typically contains navigation and other common site elements
+
 include_once 'header.php';
 ?>
 <!DOCTYPE html>
@@ -24,7 +24,7 @@ include_once 'header.php';
             <td>
                 <fieldset>
                     <legend><h3>Registration</h3></legend>
-                    <!-- Registration form setup with POST method for data submission and client-side validation on submit -->
+               
                     <form name="myForm" method="post" action="registration.php" enctype="multipart/form-data" onsubmit="return validateForm()">
                         <table>
                             <tr><td>Username:</td><td><input type="text" name="username" value="<?php echo isset($username) ? $username : '';?>"></td></tr>

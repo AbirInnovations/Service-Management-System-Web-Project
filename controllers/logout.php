@@ -1,5 +1,4 @@
 <?php 
-    // Start or resume a session
     session_start();
     
     // Delete the 'flag' cookie by setting its expiration time in the past

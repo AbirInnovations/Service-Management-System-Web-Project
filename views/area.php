@@ -11,7 +11,7 @@
 <?php include 'header.php'; ?>
     <h1>Check if an Area is Available in Dhaka City</h1>
     <input type="text" id="areaName" placeholder="Enter Area Name">
-    <button onclick="checkAreaAvailability()">Check Availability</button> <!-- Button to trigger the check -->
+    <button onclick="checkAreaAvailability()">Check Availability</button> 
 
     <p id="result"></p>
 </body>

@@ -1,5 +1,5 @@
 <?php
-// Include the database connection script
+
 require_once('db.php');
 
 // Function to register a new user
@@ -62,7 +62,7 @@ function findCustomer($serviceType, $availability) {
 // Function to get the profile of the logged-in user
 function profile() {
     $con = getConnection();
-    $username = $_COOKIE['user'];  // Ensure this variable is sanitized if it comes from user input
+    $username = $_COOKIE['user'];  
     $sql = "SELECT * FROM users WHERE username='$username'";
     $result = $con->query($sql);
     $profile = [];
@@ -76,7 +76,7 @@ function profile() {
 }
 // Function to update the profile information
 function profileUpdateModel($name, $address, $email, $mobileNumber) {
-    $username = $_COOKIE['user']; // This should be sanitized if it comes from user input
+    $username = $_COOKIE['user']; 
     $con = getConnection();
     $sql = "UPDATE users SET name = '$name', address = '$address', email = '$email', mobileNumber = '$mobileNumber' WHERE username = '$username'";
     if ($con->query($sql) === TRUE) {
@@ -109,6 +109,7 @@ function changePassword($oldPassword, $newPassword) {
 
 
 // Function to add a new service request
+
 function addRequestService($serviceType, $location, $date, $mobileNumber, $comment, $owner) {
     $con = getConnection();
     $sql = "INSERT INTO requestService (serviceType, location, date, mobileNumber, comment, owner) VALUES ('$serviceType', '$location', '$date', '$mobileNumber', '$comment', '$owner')";
@@ -124,7 +125,7 @@ function addRequestService($serviceType, $location, $date, $mobileNumber, $comme
 // Function to view all service requests or those belonging to a specific user
 
 function viewRequestService($username) {
-    $con = getConnection(); // Ensure you have a function that gets DB connection
+    $con = getConnection(); 
     $sql = "SELECT * FROM requestService WHERE owner = '$username' ORDER BY id DESC";
     $result = $con->query($sql);
     $requestService = [];
@@ -135,17 +136,14 @@ function viewRequestService($username) {
     return $requestService;
 }
 
-// Function to edit an existing service request
-// Function to edit an existing service request
-// Function to edit a specific service request by ID
+
 
 // Function to edit a specific service request by ID
 function editRequestService($id, $serviceType, $location, $date, $mobileNumber, $comment) {
     $con = getConnection();
-    // Ensure the ID is an integer
-    $id = (int) $id;
+   
+    $id = (int) $id; //ensure int id
 
-    // Basic SQL query without additional sanitization
     $sql = "UPDATE requestService SET 
             serviceType = '{$serviceType}', 
             location = '{$location}', 
@@ -156,18 +154,17 @@ function editRequestService($id, $serviceType, $location, $date, $mobileNumber, 
 
     if ($con->query($sql)) {
         header('Location: ../views/requestService.php');
-        exit(); // Prevent script execution after redirect
+        exit(); 
     } else {
-        echo "Error updating record: " . $con->error; // Display error if query fails
-    }
+        echo "Error updating record: " . $con->error; 
     $con->close();
+}
 }
 
 
-// Function to retrieve a specific service request by ID
 function viewRequestServiceForId($id) {
     $con = getConnection();
-    $id = intval($id); // Ensure the ID is an integer to prevent SQL Injection
+    $id = intval($id); // id int
     $sql = "SELECT * FROM requestService WHERE id = $id";
     $result = $con->query($sql);
     $serviceRequest = [];
@@ -179,7 +176,7 @@ function viewRequestServiceForId($id) {
         echo "Error retrieving record: " . $con->error;
     }
     $con->close();
-    return $serviceRequest; // Return an array of the service request or an empty array if the query fails
+    return $serviceRequest; 
 }
 
 ?>

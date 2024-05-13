@@ -1,7 +1,6 @@
 <?php
-// Ensure user is logged in
 require_once '../controllers/sessionCheck.php';
-require_once '../models/userModel.php';  // Make sure the path is correct
+require_once '../models/userModel.php';  
 
 $errMsg = "";
 $oldPassword = $password = $password2 = "";

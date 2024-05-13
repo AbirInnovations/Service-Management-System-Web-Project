@@ -1,5 +1,5 @@
 <?php
-require_once 'db.php'; // Assuming your db.php is set up correctly
+require_once 'db.php'; 
 
 function fetchServices() {
     $conn = getConnection();
@@ -15,6 +15,6 @@ function fetchServices() {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    echo json_encode(fetchServices());
+    echo json_encode(fetchServices()); //encodes the returned array as a JSON string
 }
 ?>

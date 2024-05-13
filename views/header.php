@@ -8,17 +8,17 @@
         <table border="0" width="100%">
             <tr>
                 <td align="center">
-                    <!-- Link to request a service -->
+                   
                     <a href="requestService.php" class="button-oval">Request Service To Admin</a>
-                    &nbsp; <!-- Non-breaking spaces for spacing between links -->
-                    <!-- Link to find a customer -->
+                    &nbsp; 
+                  
                     <a href="findCustomer.php" class="button-oval">Find Customer</a>
                     &nbsp;&nbsp;
                     <a href="home.php" class="button-oval">Home</a>
                     &nbsp;&nbsp;
-                    <!-- Conditional display based on cookie presence -->
+              
                     <?php if (!isset($_COOKIE['flag'])) { ?>
-                        <!-- Links for users not logged in -->
+                        <!-- Links for users not logged in --> 
                         <a href="login.php" class="button-oval">Login</a>
                         &nbsp;&nbsp;
                         <a href="registration.php" class="button-oval">Registration</a>

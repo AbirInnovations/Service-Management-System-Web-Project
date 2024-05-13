@@ -11,25 +11,25 @@ function validateForm() {
     // document.getElementById("passworderror").innerHTML = "";
     // document.getElementById("mobile_number_error").innerHTML = "";
 
-    // Name validation: should not contain numbers
+
     if (/[\d]/.test(name)) {
         document.getElementById("nameerror").innerHTML = "Name must not contain numbers.";
         isValid = false;
     }
 
-    // Email validation: must be less than or equal to 30 characters and contain @ and .
+
     if (email.length > 30 || !email.includes('@') || !email.includes('.')) {
         document.getElementById("emailerror").innerHTML = "Email must be less than 30 characters and contain @ and .";
         isValid = false;
     }
 
-    // Password validation: must contain one of the special characters @, #, $, &
+
     if (!/[@#$&]/.test(password)) {
         document.getElementById("passworderror").innerHTML = "Password must contain at least one special character (@, #, $, or &).";
         isValid = false;
     }
 
-    // Mobile number validation: must not be longer than 11 digits
+   
     if (mobile_number.length > 11) {
         document.getElementById("mobile_number_error").innerHTML = "Mobile number must not be longer than 11 digits.";
         isValid = false;
@@ -48,7 +48,7 @@ function checkAreaAvailability() {
             document.getElementById("result").innerHTML = this.responseText;
         }
     };
-    xhttp.open("GET", "http://localhost/midproject/controllers/checkArea.php?area=" + areaName, true);
+    xhttp.open("GET", "http://localhost/midproject/controllers/checkArea.php?area=" + areaName, true); //areaName as a query parameter
     xhttp.send();
 }
 
@@ -56,7 +56,7 @@ function showServices() {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            let services = JSON.parse(this.responseText);
+            let services = JSON.parse(this.responseText); //parses the JSON response text into a JavaScript object
             let output = '<tr><th>Service Type</th><th>Units Available</th></tr>';
 
             for (let service of services) {

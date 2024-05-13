@@ -1,10 +1,10 @@
 <?php
-// Ensure the user session is active; otherwise, redirect or deny access
+
 require_once '../controllers/sessionCheck.php';
-// Include the user model for accessing user-related functions
+
 include_once '../models/userModel.php';
 
-// Fetch service requests specific to the logged-in user
+
 $username = isset($_COOKIE['user']) ? $_COOKIE['user'] : '';
 $RequestS = viewRequestService($username);
 ?>

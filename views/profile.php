@@ -1,5 +1,5 @@
 <?php
-    // Include the profile controller for backend logic
+
     require_once '../controllers/profileController.php';
 ?>
 
@@ -12,7 +12,7 @@
   </head>
   <body class="dashboard-page">
     <?php 
-    // Include the header file for page navigation
+ 
     include_once 'header.php';
     ?>
 
@@ -35,7 +35,7 @@
                 </td>
 
                 <td width="70%" style="text-align: center;">
-                    <!-- Form for displaying profile details (not for submission here) -->
+               
                     <form method="post" action="" enctype="multipart/form-data">
                         <fieldset>
                         <legend>Your Profile</legend>
