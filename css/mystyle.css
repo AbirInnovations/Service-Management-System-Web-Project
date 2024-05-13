@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../Raleway/Raleway-Italic-VariableFont_wght.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Apply Raleway to all text elements */
+body, h1, h2, h3, p, a, button, input, textarea {
+    font-family: "Raleway", sans-serif;
+}
+
+h1 
+{
+    color :brown;
+}
+
+ a {
+    color: red; /* This will change the text color of the links */
+}
+
+#error
+{
+    color:aqua;
+}
+
+.button {
+width: 100px ;
+height: 30px ; 
+
+}
+
+.submit{
+    background-color: aqua;
+    color: black;
+} 
+
+.background-orange {
+    background-color: #FFA500; /* Orange */
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.registration-page {
+    background: linear-gradient(to right, #6dd5ed, #ea9534);
+    background-size: 200% 200%;
+    animation: gradientBackground 5s ease infinite;
+}
+.button-square {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px; /* Slightly rounded corners for a square shape */
+}
+
+.button-oval {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #9000a6; /* Blue background */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px; /* Large border radius for oval shape */
+}
+
+.button-square2 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #665bfd; /* Green background */
+    color: white; /* White text */
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px; /* Slightly rounded corners for a square shape */
+}
+
+button, input[type="button"] {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background for buttons */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners for buttons */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    margin-top: 20px;
+}
+
+.button-logout {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #ff000d; /* Blue background */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px; /* Large border radius for oval shape */
+}
+
+.dashboard-page {
+    background: linear-gradient(to right, #bae3ff, #55ed92);
+    background-size: 200% 200%;
+    animation: cloudMovement 10s linear infinite;
+}
+@keyframes northernLights {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* More specific selectors for login and register buttons */
+body .login-button {
+    background-color: #FFC107; /* Amber for the login button */
+    width: 200px;
+    padding: 15px;
+    margin-top: 20px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block; /* Ensures buttons take full width */
+    margin: 10px auto; /* Centers buttons horizontally */
+}
+
+body .register-button {
+    background-color: #9000a6; /* Purple for the register button */
+    width: 200px;
+    padding: 15px;
+    margin-top: 20px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block; /* Ensures buttons take full width */
+    margin: 10px auto; /* Centers buttons horizontally */
+}
+
+body {
+    background-color: #FFF176; 
+ 
+}
