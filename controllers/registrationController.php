@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $flag = true;
     }
 
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !preg_match('/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/', $email) || strlen($email) > 30) {
+    if (!filter_var($email,) || !preg_match('/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/', $email) || strlen($email) > 30) {
         $errMsg .= "Email address must be valid, must contain @ and ., and must not exceed 30 characters.<br />";
         $flag = true;
     }
